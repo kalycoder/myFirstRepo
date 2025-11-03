@@ -1,0 +1,5 @@
+flask==2.3.2
+psutil==5.9.5
+sqlalchemy==2.0.30
+
+

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+#  app:
+#    build: .
+#    volumes:
+#      - .:/app
+#    depends_on:
+#      - proxy
+
+  proxy:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./docker/nginx/ssl:/etc/nginx/ssl
